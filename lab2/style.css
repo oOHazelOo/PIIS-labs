@@ -1,0 +1,8 @@
+#movies_data {
+    border-collapse: collapse;
+}
+#movies_data td, #movies_data th{
+    border: 1px solid black;
+    padding: 8px 14px;
+    text-align: center;
+}

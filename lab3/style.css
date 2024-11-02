@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+#products{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sectionName{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+}
+.productWrapper{
+    border: 5px solid #070761;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+.productImgWrapper{
+    width: 170px;
+    height: 200px;
+}
+.productImgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.productWrapper h1{
+    color: #070761;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.productWrapper p{
+    color: #424248;
+    font-size: 12px;
+}
+.btnPanel{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btnPanel button{
+    background-color: #070761;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;cursor: pointer;
+}
+
+#quickViewWindow{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border: 2px solid #070761;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+#closeQViewWindow{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #070761;
+    border: none;
+    font-size: 30px;
+}
+.quickViewImgDiv{
+    width: 40%;
+    height: 70%;
+    border: 2px solid #070761;
+    padding: 5px;
+}
+.quickViewImgDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.quickViewData{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nameTxt{
+    color: #070761;
+}
