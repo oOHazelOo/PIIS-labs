@@ -1,0 +1,152 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header {
+    background: rgb(96, 150, 230);
+    height: 100px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+  
+  button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+    animation-name: button_vibration; /*Название анимации*/
+    animation-duration: 0.2s; /*Продолжительность анимации*/
+    animation-timing-function: ease-in-out; /*Анимация плавная*/
+    animation-iteration-count: infinite; /*Бесконечное повторение*/
+    cursor: pointer; /*Меняется курсор на указатель при наведении на кнопку*/
+  }
+  button:hover { /*Выполнится при наведении*/
+  animation-name: none; /*Убирается анимация*/
+  margin: 50px;
+  background-color: lawngreen;
+  }
+  
+  @keyframes button_vibration { /*Определяет анимацию, изменяет отступы*/
+  from {
+    margin-left: 51px;
+    margin-right: 49px;
+  }
+  
+  to {
+    margin-left: 49px;
+    margin-right: 51px;
+  }
+  }
+  
+  a {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover { /*При наведении изменяется цвет*/
+  color: lawngreen;
+  }
+  
+  a::after {
+  content: ''; /*Создалась пустая строка*/
+  position: absolute; 
+  left: 50%; /*Центрирование места для линии под текстом*/
+  bottom: 0; /*Псевдоэлемент устанавливается внизу ссылки*/
+  width: 100%; /*Ширина 100% от родительского элемента */
+  height: 1.5px; /*Высота линии*/
+  background: black;
+  transform: translateX(-50%) scaleX(0); 
+  /*translateX(-50%): Центрирует линию под текстом
+  scaleX(0): Устанавливает горизонтальное масштабирование на 0, делая линию невидимой.*/
+  transition: transform 0.3s ease;/*плавный переход за указанное время*/
+  }
+  
+  a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  background: rgb(78, 188, 78);
+  }
+  
+  #falling_ball {
+   display: inline-block;
+   width: 114px;
+   height: 210px;
+   border: 2px solid black;
+   position: relative;
+   margin: 20px 50px 0px 50px;
+  }
+  
+  #platform {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background-color: #816949;
+  border: 2px solid black;
+  left: 5px;
+  bottom: 5px;
+  }
+  
+  
+  #ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background:  rgb(243, 164, 188);
+  border: 2px solid black;
+  left: 35px;
+  bottom: 160px; /* Начальная позиция выше платформы */
+  animation: bounce 2s;
+  animation-fill-mode: forwards;
+  }
+  
+  
+  /* Анимация отскоков */
+  @keyframes bounce {
+  0% {
+    bottom: 160px; /* Начальная высота */
+    animation-timing-function: ease-in; /*начинается анимация медленно и потом ускоряется*/
+  }
+  18% {/*Замедление анимации при ударе о поверхность*/
+    bottom: 23px;
+    animation-timing-function: ease-out;
+  }
+  38% {
+    bottom: 120px; /* Первый отскок */
+    animation-timing-function: ease-in;
+  }
+  60% {
+    bottom: 23px;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    bottom: 80px; /* Второй отскок */
+    animation-timing-function: ease-in;
+  }
+  86% {
+    bottom: 23px;
+    animation-timing-function: ease-out;
+  }
+  92% {
+    bottom: 40px; /* Третий отскок */
+    animation-timing-function: ease-in;
+  }
+  100% {
+    bottom: 23px;
+    animation-timing-function: ease-out;
+  }
+  }
+  
+  article {
+  display: flex;
+  align-items: last baseline; /*Выравнивает дочерние элементы по последней базовой линии шрифта.*/
+  justify-content: space-around;
+  }
