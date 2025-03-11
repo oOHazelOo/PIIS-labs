@@ -1,0 +1,61 @@
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('fonts/Nunito.ttf') format('truetype');}
+
+#film_1{
+    font-family: 'Nunito';
+}
+
+@font-face {
+    font-family: 'Rupster Script Free Regular';
+    src: url('fonts/Rupster\ Script\ Free\ Regular.ttf') format('truetype');}
+
+#film_2{
+    font-family: 'Rupster Script Free Regular';
+}
+
+@font-face {
+    font-family: 'Scumbria Regular';
+    src: url('fonts/Scumbria Regular.otf') format('truetype');}
+
+#film_3{
+    font-family: 'Scumbria Regular';
+}
+
+
+body {
+    margin: 0px;
+    background-color: #082a31;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    border-radius: 30px;
+}
+
+article {
+    max-width: 1440px;
+    background-color:#255d68;
+}
+
+h1 {
+    margin: 0px;
+}
+
+
+li {
+    list-style-type: none;
+}
+li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bold_text {
+    font-weight: bold;
+}
