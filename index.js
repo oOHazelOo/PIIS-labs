@@ -278,7 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateIndicators();
     }
 
-
     function createIndicators() {
         const indicatorsContainer = document.createElement('div');
         indicatorsContainer.className = 'carousel__indicators';
