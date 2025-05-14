@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmora - Фильмы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="films.css">
+</head>
+<body>
+    <!-- Шапка  -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Filmora</a>
+            
+                <button class="burger-menu" aria-label="Меню">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+                
+                <nav class="nav">
+                    <a href="films.html" class="nav__link">Фильмы</a>
+                    <a href="reviews.html" class="nav__link">Рецензии</a>
+                    <a href="news.html" class="nav__link">Новости</a>
+                    <a href="int.html" class="nav__link">Интервью</a>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeBtn">Тёмная тема</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="films-main">
+        <div class="container">
+            <!-- Строка поиска -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Найти фильм...">
+                <button id="searchBtn">Поиск</button>
+            </div>
+
+            <!-- Сетка фильмов -->
+            <div class="films-grid" id="filmsGrid">
+              
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал  -->
+  
+ <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3 class="footer__title">Позвоните нам</h3>
+                <p class="footer__text">+375 (29) 456-78-90</p>
+                <p class="footer__text">+375 (29) 654-32-10</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Напишите нам</h3>
+                <p class="footer__text"><a href="mailto:info@filmora.by" class="footer__link">info@filmora.by</a></p>
+                <p class="footer__text"><a href="mailto:support@filmora.by" class="footer__link">support@filmora.by</a></p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Посетите нас</h3>
+                <p class="footer__text">
+                    <a href="https://www.google.com/maps/place/ул.+Кирова,+42,+Минск,+Беларусь" 
+                       target="_blank" 
+                       class="footer__link">
+                        ул. Кирова, 42, Минск
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__love">С любовью, ваш Filmora</p>
+        </div>
+    </div>
+</footer>
+<!-- Модальное окно фильма -->
+<div id="filmModal" class="modal">
+    <div class="modal-content film-modal">
+        <span class="close">&times;</span>
+        <div class="film-modal__main">
+            <div class="film-modal__poster">
+                <img id="modalFilmPoster" src="" alt="">
+            </div>
+            <div class="film-modal__info">
+                <h2 id="modalFilmTitle"></h2>
+                <p><strong>Год:</strong> <span id="modalFilmYear"></span></p>
+                <p><strong>Жанр:</strong> <span id="modalFilmGenre"></span></p>
+                <p><strong>Режиссер:</strong> <span id="modalFilmDirector"></span></p>
+                <p><strong>Актеры:</strong> <span id="modalFilmActors"></span></p>
+                <p><strong>Описание:</strong> <span id="modalFilmDescription"></span></p>
+            </div>
+        </div>
+        <div class="film-modal__reviews">
+            <button id="toggleReviews" class="reviews-toggle">Показать отзывы</button>
+            <div id="reviewsContainer" class="reviews-container hidden">
+                <div id="reviewsList"></div>
+                <div id="authMessage" class="auth-message hidden">
+                    Чтобы оставить отзыв, пожалуйста, <a href="index.html" class="auth-link">войдите</a> в аккаунт.
+                </div>
+                <button id="addReviewBtn" class="add-review-btn">Настало мое время!</button>
+                <div id="reviewForm" class="review-form hidden">
+                    <div class="rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Ваш отзыв..."></textarea>
+                    <button id="submitReview" class="submit-review-btn">В путь!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="films.js"></script>
+</body>
+</html>

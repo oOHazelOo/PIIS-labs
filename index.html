@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmora — Обзоры фильмов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Filmora</a>
+                
+                <button class="burger-menu" aria-label="Меню">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+                
+                <nav class="nav">
+                    <a href="films.html" class="nav__link">Фильмы</a>
+                    <a href="reviews.html" class="nav__link">Рецензии</a>
+                    <a href="news.html" class="nav__link">Новости</a>
+                    <a href="int.html" class="nav__link">Интервью</a>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeBtn">Тёмная тема</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero-секция с изображением -->
+    <section class="hero">
+        <img src="images/zal.jpeg" alt="Кинозал" class="hero__image">
+        <div class="hero__content">
+            <h1 class="hero__title">FILMORA</h1>
+            <p class="hero__subtitle">Открой свой взгляд на мир кино!</p>
+            <button id="authBtn" class="hero__button">Войти</button>
+        </div>
+    </section>
+
+    <!-- Features секция с якорной ссылкой -->
+    <section class="features">
+        <div class="container">
+            <h2 class="features__title">
+                <a href="#new-releases" class="features__link">Смотри. Оценивай. Наслаждайся.</a>
+            </h2>
+            <div class="features__grid">
+                <div class="feature">
+                    <h3 class="feature__title">Смотри</h3>
+                    <p class="feature__text">Погружайся в мир крутых премьер! Лови только лучшие кадры!</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature__title">Оценивай</h3>
+                    <p class="feature__text">Ставь оценки честно - как настоящий критик!</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature__title">Наслаждайся</h3>
+                    <p class="feature__text">Спорь, доказывай, влюбляйся в кино снова!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stat">
+                    <div class="stat__number" data-target="1000">0</div>
+                    <div class="stat__label">фильмов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="30000">0</div>
+                    <div class="stat__label">отзывов и рецензий</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="950">0</div>
+                    <div class="stat__label">новостей</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="362">0</div>
+                    <div class="stat__label">интервью</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция новинок с якорем -->
+    <section class="new-releases" id="new-releases">
+        <div class="container">
+            <h2 class="section-title">Новинки 2025</h2>
+            <div class="carousel">
+                <button class="carousel__button carousel__button--left">&larr;</button>
+                <div class="carousel__track-container">
+                    <div class="carousel__track">
+                    </div>
+                </div>
+                <button class="carousel__button carousel__button--right">&rarr;</button>
+            </div>
+        </div>
+    </section>
+
+ <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3 class="footer__title">Позвоните нам</h3>
+                <p class="footer__text">+375 (29) 456-78-90</p>
+                <p class="footer__text">+375 (29) 654-32-10</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Напишите нам</h3>
+                <p class="footer__text"><a href="mailto:info@filmora.by" class="footer__link">info@filmora.by</a></p>
+                <p class="footer__text"><a href="mailto:support@filmora.by" class="footer__link">support@filmora.by</a></p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Посетите нас</h3>
+                <p class="footer__text">
+                    <a href="https://www.google.com/maps/place/ул.+Кирова,+42,+Минск,+Беларусь" 
+                       target="_blank" 
+                       class="footer__link">
+                        ул. Кирова, 42, Минск
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__love">С любовью, ваш Filmora</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h2>Авторизация</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p id="loginError" class="error-message"></p>
+            <p class="modal__text">Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+        </div>
+
+        <!-- Форма регистрации -->
+        <div id="registerForm" class="modal__content hidden">
+            <span class="modal__close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" id="regName" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="regEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="regPassword" placeholder="Пароль (мин. 6 символов)" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="regPasswordConfirm" placeholder="Повторите пароль" required minlength="6">
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p id="registerError" class="error-message"></p>
+            <p class="modal__text">Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
