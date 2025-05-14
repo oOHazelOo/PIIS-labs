@@ -4,7 +4,7 @@
     --bg-color: #ffffff;
     --text-color: #333333;
     --header-bg: #f8f8f8;
-    --logo-color: #800020; /* Бордовый */
+    --logo-color: #800020; 
     --nav-link-color: #555555;
     --nav-link-hover: #800020;
     --modal-bg: #f8f8f8;
@@ -405,7 +405,7 @@ body {
 .modal button[type="submit"] {
     max-width: 300px;
 }
-/* Features section */
+/* Слоганы */
 .features {
     padding: 80px 0;
     background-color: var(--bg-color);
@@ -491,10 +491,10 @@ body {
         font-size: 2rem;
     }
 }
-/* Stats section */
+/* Статистика */
 .stats {
     padding: 80px 0;
-    background-color: rgb(117, 27, 48); /* бордовый фон */
+    background-color: rgb(117, 27, 48); 
     position: relative;
     z-index: 1;
 }
@@ -508,7 +508,7 @@ body {
 }
 
 .stat {
-    background: #ffffff; /* Белый фон блоков */
+    background: #ffffff; 
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -516,7 +516,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
-    border: 1px solid rgba(128, 0, 32, 0.1); /* Тонкая бордовая рамка */
+    border: 1px solid rgba(128, 0, 32, 0.1); 
 }
 
 .stat:nth-child(1) {
@@ -535,30 +535,30 @@ body {
 .stat__number {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--logo-color); /* Бордовый цвет цифр */
+    color: var(--logo-color); 
     margin-bottom: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .stat__label {
     font-size: 1.2rem;
-    color: #333; /* Темный цвет текста */
+    color: #333;
     font-weight: 500;
 }
 
-/* Анимация при прокрутке */
+
 .stats.animated .stat {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Для темной темы */
+
 [data-theme="dark"] .stats {
-    background-color: rgb(117, 27, 48); /* Бледно-бордовый для темной темы */
+    background-color: rgb(117, 27, 48); 
 }
 
 [data-theme="dark"] .stat {
-    background: var(--header-bg); /* Темный фон блоков */
+    background: var(--header-bg); 
     border-color: rgba(193, 18, 31, 0.3);
 }
 
@@ -756,7 +756,7 @@ body {
     transform: translateY(0);
 }
 
-/* Задержка для элементов внутри */
+
 .carousel {
     transition-delay: 0.2s;
 }
@@ -765,9 +765,9 @@ body {
     transition-delay: 0.1s;
 }
 
-/* Footer styles */
+
 .footer {
-    background-color: rgb(117, 27, 48); /* Бордовый цвет */
+    background-color: rgb(117, 27, 48);
 
     padding: 60px 0 30px;
     margin-top: 80px;
