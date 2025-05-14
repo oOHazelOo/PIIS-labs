@@ -1,4 +1,4 @@
-# EVT_labs Маслова Юлиана Юрьевна, 210901, https://oohazeloo.github.io/EVT-labs/
+# EVT_labs Маслова Юлиана Юрьевна, 210901, https://oohazeloo.github.io/PIIS-labs/
 
 # CV: Маслова Юлиана Юрьевна
 
